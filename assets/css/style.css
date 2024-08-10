@@ -76,8 +76,9 @@ body {
 .main_header .list_items ul .list_data a {
     color: #000 !important;
     font-weight: 400;
-    padding: 0px 10px;
+    padding: 0px 0px;
     font-size: 18px;
+    margin: 0px 10px;
 }
 
 .main_header .list_items ul .list_data a:focus {
@@ -92,7 +93,7 @@ body {
     box-shadow: none;
 }
 
-.section-2{
+.section-2 {
     padding-top: 75px;
 }
 
@@ -635,6 +636,28 @@ button.btn_footer {
     height: 100%;
 }
 
+.navbar-nav .nav-item .nav-link {
+    position: relative;
+    padding-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-item .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #de0c27;
+    /* Change this to your desired color */
+    transition: width 0.3s ease;
+}
+
+.navbar-nav .nav-item .nav-link:hover::after {
+    width: 100%;
+}
+
 @media (max-width: 991px) {
     .main_header .list_items {
         margin-top: 20px;
@@ -644,7 +667,8 @@ button.btn_footer {
         font-weight: 500;
         margin: 5px 0px;
     }
-    .features_serviceImg{
+
+    .features_serviceImg {
         padding: 0px;
     }
 }
